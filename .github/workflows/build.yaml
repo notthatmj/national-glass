@@ -27,5 +27,5 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: national-glass-build
-          path: NationalGlass/bin/Release/net6.0/linux-x64/publish/
+          path: NationalGlass/bin/Release/net6.0/publish/
         
