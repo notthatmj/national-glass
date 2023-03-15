@@ -36,7 +36,7 @@ jobs:
     
   deploy:
     needs: build
-    runs-on: deploy
+    runs-on: self-hosted deploy
     steps:
       - uses: actions/download-artifact@v3
         with:
