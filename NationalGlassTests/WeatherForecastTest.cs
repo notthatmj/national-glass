@@ -1,6 +1,6 @@
 namespace NationalGlassTests;
 
-public class UnitTest1
+public class WeatherForecastTest
 {
     [Fact]
     public void Test1()
