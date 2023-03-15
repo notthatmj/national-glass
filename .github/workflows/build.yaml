@@ -44,7 +44,8 @@ jobs:
       - shell: powershell
         run: Get-Process -Name dotnet -ErrorAction SilentlyContinue | Stop-Process -Force
       - shell: powershell
-        run: rmdir -r \deployment
+        run: |
+          rmdir -r \deployment
           cp * \deployment
           cd \deployment
           Start-Process -FilePath "dotnet" -ArgumentList "NationalGlass.dll" 
