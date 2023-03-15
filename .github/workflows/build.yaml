@@ -38,20 +38,24 @@ jobs:
     needs: build
     runs-on: [self-hosted, deploy]
     steps:
-      - shell: pwsh
+      - shell: powershell
         run: $process = Get-Process | where {$_.Name -eq 'dotnet' -and $_.modules.ModuleName -eq 'NationalGlass.dll'}
              if ($process) { $process | Stop-Process -Force }
       - uses: actions/download-artifact@v3
         with:
             name: national-glass-build
-#      - shell: pwsh
-#        run: rmdir -r \deployment
-#          cp * \deployment
-#          cd \deployment
-#          dotnet NationalGlass.dll
-      - shell: bash
-        run: rm -r \deployment
+      - shell: pwsh
+        run: rmdir -r \deployment
           cp * \deployment
           cd \deployment
-          nohup dotnet NationalGlass.dll &
+          dotnet NationalGlass.dll
+#      - uses: actions/download-artifact@v3
+#        with:
+#            name: national-glass-build
+#      - shell: bash
+#        run:  
+#          rm -r \deployment
+#          cp * \deployment
+#          cd \deployment
+#          nohup dotnet NationalGlass.dll &
           
