@@ -42,4 +42,4 @@ jobs:
         with:
             name: national-glass-build
       - shell: bash
-        run: echo `ls`
+        run: echo "hello, world!"
