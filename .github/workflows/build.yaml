@@ -57,7 +57,7 @@ jobs:
             name: national-glass-build
       - shell: bash
         run: |
-          rm -r \deployment
+          rm -rf \deployment
           cp * \deployment
           cd \deployment
           nohup dotnet NationalGlass.dll &
