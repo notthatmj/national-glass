@@ -43,22 +43,22 @@ jobs:
             name: national-glass-build
       - shell: powershell
         run: Get-Process -Name dotnet -ErrorAction SilentlyContinue | Stop-Process -Force
-      - shell: powershell
-        run: |
-          if (Test-Path \deployment) {
-            rmdir -r \deployment
-          }
-          mkdir \deployment
-          cp * \deployment
-          cd \deployment
-          Start-Process -FilePath "dotnet" -ArgumentList "NationalGlass.dll" 
-#      - uses: actions/download-artifact@v3
-#        with:
-#            name: national-glass-build
-#      - shell: bash
-#        run:  
-#          rm -r \deployment
+#      - shell: powershell
+#        run: |
+#          if (Test-Path \deployment) {
+#            rmdir -r \deployment
+#          }
+#          mkdir \deployment
 #          cp * \deployment
 #          cd \deployment
-#          nohup dotnet NationalGlass.dll &
+#          Start-Process -FilePath "dotnet" -ArgumentList "NationalGlass.dll" 
+      - uses: actions/download-artifact@v3
+        with:
+            name: national-glass-build
+      - shell: bash
+        run:  
+          rm -r \deployment
+          cp * \deployment
+          cd \deployment
+          nohup dotnet NationalGlass.dll &
           
