@@ -56,7 +56,7 @@ jobs:
         with:
             name: national-glass-build
       - shell: bash
-        run:  
+        run: |
           rm -r \deployment
           cp * \deployment
           cd \deployment
