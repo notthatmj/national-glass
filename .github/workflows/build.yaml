@@ -61,5 +61,5 @@ jobs:
           mkdir /c/deployment
           cp * /c/deployment
           cd /c/deployment
-          nohup dotnet NationalGlass.dll &
+          nohup dotnet NationalGlass.dll > /dev/null 2>&1  &
           
