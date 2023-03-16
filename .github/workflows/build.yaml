@@ -53,4 +53,4 @@ jobs:
       - name: Download Docker image
         run: docker pull ${{ secrets.DOCKERHUB_USERNAME }}/nationalglass:latest        
       - name: Start docker container
-        run: docker run -d -p 5000:80 ${{ secrets.DOCKERHUB_USERNAME }}/nationalglass:latest
+        run: docker run -d -p 5000:80 -name national-glass ${{ secrets.DOCKERHUB_USERNAME }}/nationalglass:latest
