@@ -44,12 +44,13 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-      - name: Stop and remove old container and image
+      - name: Stop and remove old container and image if present
         run: |
-          docker stop --name national-glass
+          docker stop national-glass
           docker container rm national-glass
-          docker image rm mjohnson8thlight/nationalglass:latest
+          docker image rm ${{ secrets.DOCKERHUB_USERNAME }}/nationalglass:latest
+          exit 0
       - name: Download Docker image
-        run: docker pull mjohnson8thlight/nationalglass:latest        
+        run: docker pull ${{ secrets.DOCKERHUB_USERNAME }}/nationalglass:latest        
       - name: Start docker container
-        run: docker run -d -p 5000:80 mjohnson8thlight/nationalglass:latest
+        run: docker run -d -p 5000:80 ${{ secrets.DOCKERHUB_USERNAME }}/nationalglass:latest
