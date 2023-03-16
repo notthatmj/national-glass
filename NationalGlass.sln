@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NationalGlass", "NationalGlass\NationalGlass.csproj", "{456A7BFA-F743-4B0E-8B77-CC65638E6A1B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NationalGlass", "NationalGlass\NationalGlass.csproj", "{8E8DC1DB-0EF6-4922-91F6-3A61D9084781}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NationalGlassTests", "NationalGlassTests\NationalGlassTests.csproj", "{71142315-E9BF-4362-AAA5-78DFB3800B4D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NationalGlassTests", "NationalGlassTests\NationalGlassTests.csproj", "{50BEB8A9-407D-41D2-A420-9822637063DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,13 +16,13 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{456A7BFA-F743-4B0E-8B77-CC65638E6A1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{456A7BFA-F743-4B0E-8B77-CC65638E6A1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{456A7BFA-F743-4B0E-8B77-CC65638E6A1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{456A7BFA-F743-4B0E-8B77-CC65638E6A1B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{71142315-E9BF-4362-AAA5-78DFB3800B4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{71142315-E9BF-4362-AAA5-78DFB3800B4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{71142315-E9BF-4362-AAA5-78DFB3800B4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{71142315-E9BF-4362-AAA5-78DFB3800B4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E8DC1DB-0EF6-4922-91F6-3A61D9084781}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E8DC1DB-0EF6-4922-91F6-3A61D9084781}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E8DC1DB-0EF6-4922-91F6-3A61D9084781}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E8DC1DB-0EF6-4922-91F6-3A61D9084781}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50BEB8A9-407D-41D2-A420-9822637063DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50BEB8A9-407D-41D2-A420-9822637063DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50BEB8A9-407D-41D2-A420-9822637063DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50BEB8A9-407D-41D2-A420-9822637063DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
