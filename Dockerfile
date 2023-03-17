@@ -8,6 +8,5 @@ COPY NationalGlass .
 RUN dotnet publish -c Release -o /publish
 FROM mcr.microsoft.com/dotnet/aspnet:6.0 as runtime
 COPY --from=build-env /publish .
-ENV NG_SUBJECT="you big nerds"
 EXPOSE 80
 ENTRYPOINT ["dotnet", "NationalGlass.dll"]
