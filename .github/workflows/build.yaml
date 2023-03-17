@@ -30,6 +30,7 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v4
         with:
+          build-args: NG_GREETING=${{ secrets.NG_GREETING }}, NG_SUBJECT=${{ secrets.NG_SUBJECT }}
           context: .
           file: ./Dockerfile
           push: true
@@ -53,4 +54,6 @@ jobs:
       - name: Download Docker image
         run: docker pull ${{ secrets.DOCKERHUB_USERNAME }}/nationalglass:latest        
       - name: Start docker container
-        run: docker run -d -p 5000:80 --name national-glass ${{ secrets.DOCKERHUB_USERNAME }}/nationalglass:latest
+        run: |
+          docker run -d -p 5000:80 --name national-glass ${{ secrets.DOCKERHUB_USERNAME }}/nationalglass:latest \
+            --env "NG_GREETING=${{ secrets.NG_GREETING }}" --env "NG_SUBJECT=${{ secrets.NG_SUBJECT}}"
